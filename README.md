@@ -8,45 +8,60 @@ Start the windows installer and make sure the locale is set to `English (World)`
 <details>
   <summary><i>If your machine does not have a TPM module and/or has Secure Boot disabled</i></summary>
     Open CMD with Shift + F10 and enter `regedit`
+
     Create `LabConfig` key under `HKEY_LOCAL_MACHINE\SYSTEM\Setup`
+
     Create the following DWORD entries under the LabConfig key:
         - BypassTPMCheck
         - BypassSecureBootCheck
+
     Both entries should have the value of `1`
 </details>
 
 
 ## OOBE
 When OOBE opens, wait for the region settings to time out with a <b>OOBEREGION</b> error, and click <b>skip</b>
+
 Go through the rest of OOBE normally 
 
 
 ## Post OOBE
 Open settings and head to "Windows Update". Click on "Check for updates" install all updates and reboot. 
+
 Do this several times untill there are no more updates
 
 
 ## Debloat windows
 Open powershell as Administrator and enter `iwr -useb https://christitus.com/win | iex` to start CTT's utility
+
 Press "n" when prompted
+
 Under the "Install" tab, select the programs you want installed and press "Install selection"
+
 Under the "Tweaks" tab, select the desktop preset, make sure all the checkboxes on the left is clicked
+
 Make sure dark theme is on, bing search is off, ultimate performace profile is added and a WinUtil shortcut is added to your desktop
+
 On the right side, check "Disable Power Throttling", "Show File Extentions", "Remove Cortana", "Remove Microsoft Edge", "Set Classic Right-Click Menu", "Disable Mouse Acceleration", "Enable Verbose Logon Messages" and "Cloudflare" in the DNS dropdown
+
 Click "Run Tweaks" and reboot your computer when tweaks are finished
 
 
 ## Windows activation
 <details>
   <summary><i>If your machine does not have an active windows key</i></summary>
+
     Open powershell as Administrator and enter `irm https://massgrave.dev/get | iex` to start massgravel's windows activation script
+    
     Select HWID by pressing `1` when prompted for an activation method
+
     When the program has returned to the initial screen, press `0` to exit the program
 </details>
 
 
 ## Disable startup programs
 Hold, Control, Shift and press Ecscape at the same time. This will cause task manager to launch
+
 Enter the "Startup apps" tab and disable all unwanted startup apps
 
 
