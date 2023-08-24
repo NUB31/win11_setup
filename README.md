@@ -7,6 +7,7 @@ Start the windows installer and make sure the locale is set to `English (World)`
 ## TPM/Secure Boot bypass
 <details>
   <summary><i>If your machine does not have a TPM module and/or has Secure Boot disabled</i></summary>
+    
     Open CMD with Shift + F10 and enter `regedit`
 
     Create `LabConfig` key under `HKEY_LOCAL_MACHINE\SYSTEM\Setup`
@@ -16,6 +17,7 @@ Start the windows installer and make sure the locale is set to `English (World)`
         - BypassSecureBootCheck
 
     Both entries should have the value of `1`
+
 </details>
 
 
@@ -26,9 +28,11 @@ Go through the rest of OOBE normally
 
 
 ## Post OOBE
-Open settings and head to "Windows Update". Click on "Check for updates" install all updates and reboot. 
+Open settings and head to "Windows Update"
 
-Do this several times untill there are no more updates
+Click on "Check for updates", install available updates and reboot 
+
+Repeat previous step until on updates appear when clicking "Check for updates"
 
 
 ## Debloat windows
@@ -56,6 +60,7 @@ Click "Run Tweaks" and reboot your computer when tweaks are finished
     Select HWID by pressing `1` when prompted for an activation method
 
     When the program has returned to the initial screen, press `0` to exit the program
+
 </details>
 
 
